@@ -1442,7 +1442,17 @@ a:focus {
 
 .blog .blog-item {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 40px; /* Increased spacing between items */
+    transition: background-color .3s, border-radius .3s; /* Smooth transition for hover effects */
+}
+
+.blog .blog-item:hover {
+    background-color: #f9f9f9; /* Light background color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.blog .blog-item:hover .blog-text h2 {
+    color: #333; /* Change text color on hover */
 }
 
 .blog .blog-img {
@@ -1456,7 +1466,7 @@ a:focus {
     transition: .5s;
 }
 
-.blog .blog-item:hover img {
+.blog .blog-item:hover .blog-img img {
     transform: scale(1.1);
 }
 
@@ -1471,6 +1481,7 @@ a:focus {
 .blog .blog-text h2 {
     font-size: 25px;
     font-weight: 700;
+    transition: color .3s; /* Smooth transition for text color */
 }
 
 .blog .blog-text p {
@@ -1506,6 +1517,7 @@ a:focus {
 .blog .blog-meta p:last-child {
     margin: 0;
 }
+
 
 
 /*******************************/
