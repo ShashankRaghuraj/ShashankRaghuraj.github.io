@@ -9,7 +9,9 @@ body {
   Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 700;
     font-style: normal;
+    /* cursor: url('../img/cursor.png'), auto; */
 }
+
 
 
 
@@ -58,6 +60,7 @@ h6 {
 a {
     color: #313131;
     transition: .3s;
+    /* cursor: url('../img/handcursor.png'), auto; */
 }
 
 a:hover,
@@ -615,6 +618,7 @@ a:focus {
     background: inherit;
     width: 50%;
     margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .experience .timeline .timeline-item.left {
@@ -645,20 +649,20 @@ a:focus {
 }
 
 .experience .timeline .timeline-item::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 46px;
-  right: 10px;
-  z-index: 1;
-  border: 10px solid;
-  border-color: transparent transparent transparent #dddddd;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 46px;
+    right: 10px;
+    z-index: 1;
+    border: 10px solid;
+    border-color: transparent transparent transparent #dddddd;
 }
 
 .experience .timeline .timeline-item.right::before {
-  left: 10px;
-  border-color: transparent #dddddd transparent transparent;
+    left: 10px;
+    border-color: transparent #dddddd transparent transparent;
 }
 
 .experience .timeline .timeline-date {
@@ -714,6 +718,11 @@ a:focus {
     font-size: 16px;
 }
 
+.experience .timeline .timeline-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 767.98px) {
     .experience .timeline::after {
         left: 8px;
@@ -723,27 +732,27 @@ a:focus {
         width: 100%;
         padding-left: 38px;
     }
-    
+
     .experience .timeline .timeline-item.left {
         padding-right: 0;
     }
-    
+
     .experience .timeline .timeline-item.right {
         left: 0%;
         padding-left: 38px;
     }
 
-    .experience .timeline .timeline-item.left::after, 
+    .experience .timeline .timeline-item.left::after,
     .experience .timeline .timeline-item.right::after {
         left: 0;
     }
-    
+
     .experience .timeline .timeline-item.left::before,
     .experience .timeline .timeline-item.right::before {
         left: 18px;
         border-color: transparent #dddddd transparent transparent;
     }
-    
+
     .experience .timeline .timeline-item.left .timeline-date,
     .experience .timeline .timeline-item.right .timeline-date {
         position: relative;
@@ -753,7 +762,7 @@ a:focus {
         text-align: left;
         margin-bottom: 10px;
     }
-    
+
     .experience .timeline .timeline-item.left .timeline-text,
     .experience .timeline .timeline-item.right .timeline-text {
         border-right: none;
@@ -782,6 +791,7 @@ a:focus {
 
 .service .service-item:hover {
     box-shadow: inset 800px 0 0 0 #C75146;
+
 }
 
 .service .service-icon {
