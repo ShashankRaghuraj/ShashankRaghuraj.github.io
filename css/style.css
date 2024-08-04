@@ -21,7 +21,40 @@ h5,
 h6 {
     color: #414141;
 }
+/* Ensure the image is properly contained within its parent */
+.about-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.hover-effect {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.hover-effect:hover {
+    transform: scale(1.1); /* Scale up the image */
+    opacity: 0.8; /* Change the opacity on hover */
+}
+
+.circle-image {
+    border-radius: 50%;
+    width: 450px; /* Adjust width as needed */
+    height: 450px; /* Adjust height to match width */
+    object-fit: cover; /* Ensures the image covers the circular area */
+    border: 3px solid #ffffff; /* White border, adjust color and width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for a professional look */
+    margin-bottom: 40px; /* Adds space below the image */
+    margin-top: 30px;
+    margin-right: 900px; /* Moves the image 20px to the left, adjust as needed */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.circle-image:hover {
+    border-color: #00aaff; /* Change border color on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: scale(1.05); /* Slightly zoom in on hover */
+}
 a {
     color: #313131;
     transition: .3s;
